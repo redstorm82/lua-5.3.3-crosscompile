@@ -1,11 +1,15 @@
+0.安装工具链到指定位置
+	x86（gcc）:标准gcc
+	mipsel(gcc)： /opt/buildroot-gcc463/usr 对应安装包./prebuild/toolchain/buildroot-gcc463_32bits.tar.bz2
+	arm(NDK)： /opt/ndk/android-ndk-r13b  对应安装包android-ndk-r13b-linux-x86_64.zip 需要自行下载
 1.编译依赖curl库：
 	下载：git pull https://github.com/redstorm82/curl.git
 	编译：./complie_* make&&make install
-	将编译生成的$(HOME)/curl_install目录的内容拷贝到prebuild目录中
+	将编译生成的$(HOME)/curl_install目录的内容拷贝到 ./prebuild目录中
 	
 2.执行环境变量，选择要编译的平台，设置对应的编译环境
 linux 				-setenv_linux.sh
-mipsel 				-setenv_mipsel.sh
+mipsel 				-setenv_mipsel.sh 
 androidarm 		-setenv_arm_android.sh
 3.编译lua：
 	make clean && make 
